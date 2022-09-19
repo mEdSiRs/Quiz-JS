@@ -1,0 +1,157 @@
+body {
+    margin: 0;
+    background-color: darkcyan;
+    font-family: sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+.quiz-container {
+    max-width: 700px;
+    min-height: 497px;
+    background-color: #ffffff;
+    margin: 30px auto;
+    border-radius: 10px;
+    padding: 25px
+}
+
+.question-number h3 {
+    color: darkcyan;
+    border-bottom: 1px solid #ccc;
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+#question {
+    font-size: 24px;
+    color: #000000;
+    padding: 15px 0;
+    margin-bottom: 10px;
+}
+.options {
+    margin-bottom: 15px;
+}
+.options div {
+    background-color: #cccccc;
+    font-size: 16px;
+    color: #000000;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    padding: 15px;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+.options div:hover {
+    background-color: #ccccccaf;
+}
+.options div.correct {
+    color: #ffffff;
+    background: green;
+}
+.options div.wrong {
+    color: #ffffff;
+    background: red;
+
+}
+.options div.disabled {
+    pointer-events: none;
+}
+.button #btn-next {
+    padding: 10px 50px;
+    background-color: darkcyan;
+    font-size: 18px;
+    color: #ffffff;
+}
+
+#answers-tracker div {
+    height: 40px;
+    width: 40px;
+    background-color: #cccccc;
+    display: inline-block;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-top: 20px;
+}
+#answers-tracker{
+    margin-top: 20px;
+    border-top:1px solid #ccc;
+}
+
+#questions {
+    padding: 20px 5px;
+    font-size: x-large;
+    font-weight: bold;
+
+}
+#answers-tracker div.wrong {
+    color: #ffffff;
+    background: red;
+}
+#answers-tracker div.correct {
+    color: #ffffff;
+    background: green;
+}
+.quiz-over-modal {
+    display: none; /* Скрыто по умолчанию */
+    position: fixed; /* Оставаться на месте */
+    z-index: 1; /* Сидеть на вершине */
+    left: 0;
+    top: 0;
+    width: 100%; /* Полная ширина */
+    height: 100%; /* Полная высота */
+    overflow: auto; /* Включите прокрутку, если это необходимо */
+    background-color: rgb(0,0,0); /* Цвет запасной вариант */
+    background-color: rgba(0,0,0,0.4); /* Черный с непрозрачностью */
+}
+
+#btn-try-again {
+    padding: 10px 50px;
+    background-color: darkcyan;
+    font-size: 18px;
+    color: #ffffff;
+    border-color: blueviolet;
+    border-radius: 50px;
+
+}
+
+.content p{
+    font-size: x-large;
+}
+.content h1{
+    font-weight: bold;
+    font-family: 'Roboto', Тahoma, sans-serif;
+}
+.content{
+
+    text-align: center;
+    position: relative;
+    background-color: #fefefe;
+    margin: 20px 115px;
+    padding: 10px;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    animation-name: animatetop;
+    animation-duration: 0.4s
+
+}
+.quiz-over-modal.active {
+    display: block;
+
+}
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+.form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
